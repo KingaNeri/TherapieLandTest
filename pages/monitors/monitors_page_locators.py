@@ -39,7 +39,3 @@ class MonitorsPageLocators:
     DELETE_DROPDOWN_OPTION = (By.CSS_SELECTOR, "[data-test='hamburger-option']")
 
     CONFIRM_MONITOR_DELETE_BUTTON = (By.CSS_SELECTOR, "[data-test='confirm-monitor-delete-button']")
-
-
-    #(By.CSS_SELECTOR, "[data-test='']")
-
