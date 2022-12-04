@@ -78,11 +78,11 @@ class MonitorPageActions:
         self.monitor_page.emotion_date_input.web_element.send_keys(date_string)
         self.monitor_page.records_counter.web_element.click()
 
-        if emotion is 'bad':
+        if emotion == 'bad':
             self.monitor_page.smiley_bad.web_element.click()
-        elif emotion is 'negative':
+        elif emotion == 'negative':
             self.monitor_page.smiley_negative.web_element.click()
-        elif emotion is 'good':
+        elif emotion == 'good':
             self.monitor_page.smiley_good.web_element.click()
         else:
             self.monitor_page.smiley_great.web_element.click()
