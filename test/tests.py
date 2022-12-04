@@ -75,13 +75,17 @@ class TestSmileyMonitor:
         self.monitors_page_actions = MonitorPageActions(browser)
         self.monitors_page_actions.add_new_smiley_monitor()
         self.monitors_page_actions.add_new_smiley_entry(emotion='good')
+        check.equal(1, self.monitors_page_actions.get_records_number())
 
         yesterday_date = date.today() - timedelta(days=1)
         self.monitors_page_actions.add_new_smiley_entry(emotion='great', input_date=yesterday_date)
+        check.equal(2, self.monitors_page_actions.get_records_number())
 
         two_days_ago_date = date.today() - timedelta(days=2)
         self.monitors_page_actions.add_new_smiley_entry(emotion='negative', input_date=two_days_ago_date)
+        check.equal(3, self.monitors_page_actions.get_records_number())
 
         three_days_ago_date = date.today() - timedelta(days=3)
         self.monitors_page_actions.add_new_smiley_entry(emotion='bad', input_date=three_days_ago_date)
+        check.equal(4, self.monitors_page_actions.get_records_number())
         # here it is a bit hard to verify graph, it could be tested by visual testing tool like Percy maybe?

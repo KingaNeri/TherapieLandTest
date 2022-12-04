@@ -46,6 +46,12 @@ class MonitorPageActions:
     def get_starting_date(self):
         return self.monitor_page.starting_date.web_element.text
 
+    def get_records_number(self):
+        time.sleep(1)
+        text_element = self.monitor_page.records_counter.web_element.text
+        # take just number from text
+        return int(text_element.split("\n")[0])
+
     def is_monitor_detail_panel_visible(self):
         return self.monitor_page.monitor_detail_panel.is_visible()
 
