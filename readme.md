@@ -1,6 +1,7 @@
 # TherapieLand test
  1. [Test cases](#test-scenarios)
  2. [Project structure](#project-structure)
+ 3. [Running tests](#running-tests)
  3. [Noticed bugs and suggestions](#noticed-bugs-on-page-and-suggestions)
 
 
@@ -62,6 +63,12 @@ GIVEN user is logged in to TherapieLand and created Smiley monitor
 WHEN user adds emotions entires with all available emotions each for last 4 days
 
 THEN user can see graph with added emotion entries in the current week panel
+
+# Running tests
+1. Install reqirements
+`pip install -r requirements.txt`
+2. Run all tests from main directory
+`pytest test/tests.py`
 
 # Project structure
 1. [config.py](config/config.py) - separate configuration for easier editing
